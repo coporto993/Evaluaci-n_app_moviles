@@ -7,9 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginPage implements OnInit {
 
+  modeloUsuario: string;
+  modeloPass: string;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  validarLogin() {
+    if(this.modeloUsuario === 'user' && this.modeloPass === 'admin'){
+
+    }
+    else {
+      
+    }
   }
 
 }

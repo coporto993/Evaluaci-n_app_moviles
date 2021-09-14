@@ -1,9 +1,20 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>login</ion-title>
+    <ion-back-button ></ion-back-button>
+    <ion-title>Login</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-item class="ion-margin">
+    <ion-label position="floating" >Usuario</ion-label>
+    <ion-input [(ngModel)]="modeloUsuario"></ion-input>
+  </ion-item>
+  <ion-item class="ion-margin">
+    <ion-label position="floating" >Contraseña</ion-label>
+    <ion-input [(ngModel)]="modeloPass"></ion-input>
+  </ion-item>
+
+  <ion-button expand="full" class="ion-margin" (click)="validarLogin()">Ingresar</ion-button>
 
 </ion-content>
