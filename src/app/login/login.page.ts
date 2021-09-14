@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginPage implements OnInit {
 
+  alertController: AlertController;
   modeloUsuario: string;
   modeloPass: string;
 
@@ -17,10 +19,11 @@ export class LoginPage implements OnInit {
 
   validarLogin() {
     if(this.modeloUsuario === 'user' && this.modeloPass === 'admin'){
-
+      console.log("ingreso correcto");
     }
     else {
-      
+      console.log("usuario y/o contraseña incorrecto");
+
     }
   }
 
