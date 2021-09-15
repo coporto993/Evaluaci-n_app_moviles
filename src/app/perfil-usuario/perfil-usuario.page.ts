@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-perfil-usuario',
@@ -7,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PerfilUsuarioPage implements OnInit {
 
-  constructor() { }
+  public nombre: string;
+  
+  constructor(public rutaActiva: ActivatedRoute) {
+    this.rutaActiva.queryParams.subscribe(params => {
+      this.nombre = params.nombre;
+    })
+   }
 
   ngOnInit() {
   }
