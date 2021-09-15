@@ -1,5 +1,10 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="volver()">
+        <ion-icon slot="icon-only" name="return-up-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
     <ion-title>Perfil</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -10,4 +15,7 @@
       Bienvenido {{nombre}}
     </ion-card-content>
   </ion-card>
+
+  <ion-button (click)="cambiarPass()" expand="full">Cambiar contraseña</ion-button>
+
 </ion-content>

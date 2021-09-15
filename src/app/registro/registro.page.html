@@ -1,14 +1,12 @@
 <ion-header>
-
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-button (click)="volver()">
         <ion-icon slot="icon-only" name="return-up-back-outline"></ion-icon>
       </ion-button>
     </ion-buttons>
-    <ion-title>Login</ion-title>
+    <ion-title>Registrarse</ion-title>
   </ion-toolbar>
-
 </ion-header>
 
 <ion-content>
@@ -20,7 +18,10 @@
     <ion-label position="floating" >Contraseña</ion-label>
     <ion-input type="password" [(ngModel)]="modeloPass"></ion-input>
   </ion-item>
+  <ion-item class="ion-margin">
+    <ion-label position="floating" >Confirmar contraseña</ion-label>
+    <ion-input type="password" [(ngModel)]="modeloCPass"></ion-input>
+  </ion-item>
 
-  <ion-button expand="full" class="ion-margin" (click)="validarLogin()">Ingresar</ion-button>
-
+  <ion-button expand="full" class="ion-margin" (click)="validarRegistro()">Ingresar</ion-button>
 </ion-content>

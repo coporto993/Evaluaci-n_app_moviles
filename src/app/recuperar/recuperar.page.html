@@ -1,9 +1,28 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="volver()">
+        <ion-icon slot="icon-only" name="return-up-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
     <ion-title>recuperar</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-item class="ion-margin">
+    <ion-label position="floating" >Contraseña actual</ion-label>
+    <ion-input [(ngModel)]="modeloPA"></ion-input>
+  </ion-item>
+  <ion-item class="ion-margin">
+    <ion-label position="floating" >Nueva contraseña</ion-label>
+    <ion-input type="password" [(ngModel)]="modeloPN"></ion-input>
+  </ion-item>
+  <ion-item class="ion-margin">
+    <ion-label position="floating" >Confirmar contraseña</ion-label>
+    <ion-input type="password" [(ngModel)]="modeloCPN"></ion-input>
+  </ion-item>
+
+  <ion-button expand="full" class="ion-margin" (click)="cambiarPass()">Cambiar</ion-button>
 
 </ion-content>

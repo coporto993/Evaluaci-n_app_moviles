@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { NavController } from '@ionic/angular';
 
 @Component({
@@ -8,13 +9,26 @@ import { NavController } from '@ionic/angular';
 })
 export class InicioPage implements OnInit {
 
-  constructor(public navController: NavController) { }
+  nombre: string;
+  pass: string;
+
+  constructor(public navController: NavController, public rutaActiva: ActivatedRoute) { 
+    this.rutaActiva.queryParams.subscribe(params =>{
+      this.nombre = params.nombre;
+    })
+    this.rutaActiva.queryParams.subscribe(params =>{
+      this.pass = params.pass;
+    })
+  }
 
   ngOnInit() {
   }
 
   iniciarSesion() {
-    this.navController.navigateRoot('login');
+    this.navController.navigateRoot('login',{queryParams:{'nombre': this.nombre, 'pass': this.pass}});
+  }
+  registrarse() {
+    this.navController.navigateRoot('registro');
   }
 
 }
