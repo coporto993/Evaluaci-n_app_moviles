@@ -46,6 +46,10 @@ export class LoginPage implements OnInit {
   volver() {
     this.navController.navigateRoot("inicio",{ queryParams: {'nombre': this.nombre, 'pass': this.pass} })
   }
+
+  cambiarPass() {
+    this.navController.navigateRoot("recuperar",{ queryParams: {'nombre': this.nombre, 'pass': this.pass} })
+  }
   
   mostrarAlerta() {
     this.presentAlert();

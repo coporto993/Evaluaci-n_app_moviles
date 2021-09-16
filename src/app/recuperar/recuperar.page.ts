@@ -31,7 +31,7 @@ export class RecuperarPage implements OnInit {
   }
 
   volver() {
-    this.navController.navigateRoot("perfil-usuario",{ queryParams: {'nombre': this.nombre, 'pass': this.pass} })
+    this.navController.navigateRoot("login",{ queryParams: {'nombre': this.nombre, 'pass': this.pass} })
   }
 
   cambiarPass() {
